@@ -1,9 +1,8 @@
-var Stack = function(){
-
+let Stack = function( ){
 	this.count = 0;
 	this.storage = {};
 
-	this.push = function(value){
+	this.push = function( value ) {
 		this.storage[this.count] = value;
 		this.count++;
 	}
