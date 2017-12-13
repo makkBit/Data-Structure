@@ -11,7 +11,6 @@ class BST{
 	constructor(){
 		this.root = null;
 	}
-
 	add(data){
 		const node = this.root;
 		if(node === null){
@@ -189,24 +188,24 @@ class BST{
 }
 
 
-	const bst = new BST();
-	bst.add(9);
-	bst.add(4);
-	bst.add(17);
-	bst.add(3);
-	bst.add(6);
-	bst.add(22);
-	bst.add(5);
-	bst.add(7);
-	bst.add(20);
-	var n = 16;
-	console.log(bst.findSum(n))
-	// console.log(bst);
-	// console.log('inorder: ',bst.printInOrder());
-	// console.log('preorder: ',bst.printPreOrder());
-	// console.log('postorder: ',bst.printPostOrder());
-	// console.log('levelorder: ',bst.printLevelOrder());
-	// console.log('heightOfTheTreeIs: ',bst.findHeight());
+const bst = new BST();
+bst.add(9);
+bst.add(4);
+bst.add(17);
+bst.add(3);
+bst.add(6);
+bst.add(22);
+bst.add(5);
+bst.add(7);
+bst.add(20);
+var n = 16;
+console.log(bst.findSum(n))
+// console.log(bst);
+// console.log('inorder: ',bst.printInOrder());
+// console.log('preorder: ',bst.printPreOrder());
+// console.log('postorder: ',bst.printPostOrder());
+// console.log('levelorder: ',bst.printLevelOrder());
+// console.log('heightOfTheTreeIs: ',bst.findHeight());
 
 
 
