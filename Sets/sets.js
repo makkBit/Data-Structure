@@ -1,6 +1,13 @@
-function MySet(){
-    this.values = [];
-    this.count = 0;
+
+class MySet{
+    constructor(){
+        this.values = [];
+        this.count = 0;
+    }
+}
+
+MySet.prototype.has = function(e){
+    return (this.values.indexOf(e) !== -1);
 }
 
 MySet.prototype.add = function(e){
@@ -9,10 +16,6 @@ MySet.prototype.add = function(e){
         this.count++;
     }
     return this.values;
-}
-
-MySet.prototype.has = function(e){
-    return (this.values.indexOf(e) !== -1);
 }
 
 MySet.prototype.remove = function(e){
@@ -75,4 +78,3 @@ console.log(set1.union(set2));
 console.log(set1.intersection(set2));
 console.log(set1.difference(set2));
 console.log(set1.subset(set2));
-
