@@ -15,10 +15,11 @@ class MinHeap {
                 let ii = this.heap.indexOf(inserted);
                 this.heap[pi] = inserted;
                 this.heap[ii] = parent;
-                parent = this.heap[Math.floor(this.heap.indexOf(inserted)/2)]; // 5
+                parent = this.heap[Math.floor(this.heap.indexOf(inserted)/2)];
             }
         }
     }
+    
 }
 
 const h = new MinHeap();
@@ -27,7 +28,6 @@ h.insert(10);
 h.insert(20);
 h.insert(1);
 console.log(h.heap);
-
 
 /*
 left child: i * 2
