@@ -12,7 +12,7 @@ class MinHeap:
 
     def decreaseKey(self, i, new_val):
         self.heap[i] = new_val
-        while(self.heap[i] < self.heap[self.parent(i)]):
+        while(i!=0 and self.heap[i] < self.heap[self.parent(i)]):
             self.heap[i], self.heap[self.parent(i)] = (
             self.heap[self.parent(i)], self.heap[i])
 
