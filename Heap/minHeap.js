@@ -1,4 +1,3 @@
-
 /*
 left child: i * 2
 right child: i * 2 + 1
@@ -28,8 +27,8 @@ class MinHeap {
             while( this.heap[i] < this.heap[this.parent(i)] &&
                 this.heap.indexOf(this.heap[i]) != 1 ){
                 let temp = this.heap[i];
-                [this.heap[i], this.heap[Math.floor(i/2)]] =
-                [this.heap[Math.floor(i/2)], this.heap[i]];
+                [this.heap[i], this.heap[this.parent(i)]] =
+                [this.heap[this.parent(i)], this.heap[i]];
                 i = this.heap.indexOf(temp);
             }  
         }
@@ -38,8 +37,8 @@ class MinHeap {
         let i = this.heap.indexOf(element); 
         this.heap[i] = new_val;
         while(this.heap[i] < this.heap[this.parent(i)] ){
-            [ this.heap[i], this.heap[Math.floor(i/2)] ] = 
-            [ this.heap[Math.floor(i/2)], this.heap[i] ];
+            [ this.heap[i], this.heap[this.parent(i)] ] = 
+            [ this.heap[this.parent(i)], this.heap[i] ];
         }
     }
     extractMin(){
@@ -49,21 +48,27 @@ class MinHeap {
         this.heapify(1);
         return min;
     }
+    getMin(){
+        return this.heap[0];
+    }
     delete(element){
-        console.log('coming soon..');   
+        this.decrease(element, -Infinity);
+        this.extractMin();
     }
     heapify(i){
         let l = this.leftChild(i);
         let r = this.rightChild(i);
+        let smallest = i;
         if( this.heap[l] < this.heap[i] ){
-            [this.heap[l], this.heap[i]] =
-             [this.heap[i], this.heap[l]];
-            this.heapify(l);
+            smallest = l;
         }
-        else if (this.heap[r] < this.heap[i]) {
-            [this.heap[r], this.heap[i]] =
-             [this.heap[i], this.heap[r]];
-            this.heapify(r);
+        if(this.heap[r] < this.heap[smallest]) {
+            smallest = r;
+        }
+        if(this.heap[i] !== this.heap[smallest]){
+            [this.heap[i],this.heap[smallest]] = 
+            [this.heap[smallest],this.heap[i]];
+            this.heapify(smallest);
         }
     }
 }
@@ -79,5 +84,5 @@ h.insert(2);
 console.log(h.heap);
 console.log(h.extractMin());
 console.log(h.heap);
-
- 
+h.delete(20);
+console.log(h.heap);
