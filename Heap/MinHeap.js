@@ -86,3 +86,4 @@ console.log(h.extractMin());
 console.log(h.heap);
 h.delete(20);
 console.log(h.heap);
+

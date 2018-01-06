@@ -26,7 +26,6 @@ class MaxHeap{
             let i = this.heap.length-1;
             while(this.heap[i] > this.heap[this.parent(i)] &&
                 this.heap.indexOf(this.heap[i]) != 1  ){
-                console.log(this.heap[i],this.heap[this.parent(i)]);
                 let temp = this.heap[i];
                 [this.heap[i], this.heap[this.parent(i)]] = 
                 [this.heap[this.parent(i)], this.heap[i]];
