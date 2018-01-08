@@ -1,10 +1,22 @@
-1) if |V| = n  
+1) Graph is a data structure that consists of following two components:  
+ * A finite set of vertices also called as nodes.
+ * A finite set of ordered pair of the form (u, v) called as edge.   
+ The pair is ordered because (u, v) is not same as (v, u) in case of directed graph(di-graph).   
+ The pair of form (u, v) indicates that there is an edge from vertex u to vertex v. The edges may contain weight/value/cost.
+
+Use:  
+Graphs are used to represent many real life applications: Graphs are used to represent networks. The networks may include paths in a city or telephone network or circuit network.   
+Graphs are also used in social networks like linkedIn, facebook. For example, in facebook, each person is represented with a vertex(or node). Each node is a structure and contains information like person id, name, gender and locale. See this for more applications of graph.
+
+
+if |V| = n  
 then,   
 ```
 |E| <= n(n-1)  // if directed  
 |E| <= n(n-1)/2   // if undirected  
 *|V| and |E| stands for no of vertixes and edges*
  ```
+ 
 
 2) Graph Representation
 
@@ -120,7 +132,7 @@ Finding adjacent nodes
 
 
 
-### 4) Operation: To add a new edge:  
+3) Operation: To add a new edge:  
 in adjacency matrix: 
 ```javascript 
 A[ij] = 1  //before 0  //for addition
@@ -152,3 +164,16 @@ note:
 use bst instead of linked list to further improve
 performance of operations like inserting, searching, deleting a neighbour may reduce
 ```
+
+
+### 5)  Depth First Traversal
+ Graphs may contain cycles, so we may come to the same node again.  
+To avoid processing a node more than once, we use a *boolean visited array*.
+
+### 6) Breadth First Traversal
+Traverse nodes in layers.  
+L1  
+L2  
+L3  
+L4  
+Use a boolean visited array.  
