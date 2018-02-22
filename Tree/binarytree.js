@@ -198,8 +198,8 @@ bst.add(22);
 bst.add(5);
 bst.add(7);
 bst.add(20);
-var n = 16;
-console.log(bst.findSum(n))
+// var n = 16;
+// console.log(bst.findSum(n))
 // console.log(bst);
 // console.log('inorder: ',bst.printInOrder());
 // console.log('preorder: ',bst.printPreOrder());

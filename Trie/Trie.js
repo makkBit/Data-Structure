@@ -11,8 +11,8 @@ class Trie {
     }
     insert(str){
         let current = this.root;
-        for( let c of str){ // c
-            let index = c.charCodeAt(0) - 96;  // 3
+        for( let c of str){
+            let index = c.charCodeAt(0) - 96;
             if( current.arr[index] === undefined ){
                 current.arr[index] = new Node();
             }
