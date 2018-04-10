@@ -29,4 +29,6 @@ s1.push('google.com');
 s1.push('facebook.com');
 s1.push('github.com');
 console.log(s1.storage);
+console.log(s1.pop());
 console.log(s1.peek());
+console.log(s1.size());
