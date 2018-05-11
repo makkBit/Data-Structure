@@ -6,7 +6,7 @@
 
 Use:  
 Graphs are used to represent many real life applications: Graphs are used to represent networks. The networks may include paths in a city or telephone network or circuit network.   
-Graphs are also used in social networks like linkedIn, facebook. For example, in facebook, each person is represented with a vertex(or node). Each node is a structure and contains information like person id, name, gender and locale. See this for more applications of graph.
+Graphs are also used in social networks like linkedIn, facebook. For example, in facebook, each person is represented with a vertex(or node). Each node is a structure and contains information like person id, name, gender and locale.
 
 
 if |V| = n  
@@ -167,8 +167,13 @@ performance of operations like inserting, searching, deleting a neighbour may re
 
 
 ### 5)  Depth First Traversal
+ Idea: go forward ( in depth ) while there is a any such possibility, if not then
+    backtrack.
+
  Graphs may contain cycles, so we may come to the same node again.  
-To avoid processing a node more than once, we use a *boolean visited array*.
+ To avoid processing a node more than once, we use a *boolean visited array*.
+
+Use: cycle detection
 
 ### 6) Breadth First Traversal
 Traverse nodes in layers.  
@@ -177,3 +182,5 @@ L2
 L3  
 L4  
 Use a boolean visited array.  
+
+Use: finding shortest path
