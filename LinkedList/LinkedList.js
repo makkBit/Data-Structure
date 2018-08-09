@@ -63,6 +63,15 @@ class LinkedList{
       previousNode.next = currentNode.next;
     }
   }
+  iterateRecursively(k) {
+    return this.iterateRecursivelyUtil(this.head);
+  }
+  iterateRecursivelyUtil(node) {
+    if (node.next === null) {
+      return node;
+    }
+    return this.iterateRecursivelyUtil(node.next);
+  }
 }
 
 
@@ -73,5 +82,6 @@ ll.add('matt');
 ll.add('jason');
 ll.add('fin');
 ll.remove('matt');
-console.log(ll.getHead());
-console.log(ll.indexOf('matt'));
+// console.log(ll.getHead());
+// console.log(ll.indexOf('matt'));
+console.log(ll.iterateRecursively());
